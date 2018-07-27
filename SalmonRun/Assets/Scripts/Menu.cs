@@ -24,7 +24,7 @@ public class Menu : MonoBehaviour {
 
     public void PlayGame()
     {
-        SceneManager.LoadScene("DevScene");
+        SceneManager.LoadScene("Mira");
     }
 
     public void ToCredits()
