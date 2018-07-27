@@ -23,7 +23,8 @@ GameObject:
   - component: {fileID: 23701492355801308}
   - component: {fileID: 50554456998300280}
   - component: {fileID: 61413176650106180}
-  - component: {fileID: 114432859585296104}
+  - component: {fileID: 114147292212894038}
+  - component: {fileID: 114091469752241216}
   m_Layer: 9
   m_Name: Player
   m_TagString: Player
@@ -100,12 +101,12 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 2
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
+  m_CollisionDetection: 1
+  m_Constraints: 4
 --- !u!61 &61413176650106180
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -131,7 +132,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &114432859585296104
+--- !u!114 &114091469752241216
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -139,8 +140,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 1820845720836222}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d47dd6e3d16c16e4a91ded5607144e04, type: 3}
+  m_Script: {fileID: 11500000, guid: 68aea34ac3dd78547966c14bb7aa5df3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DashForce: 700
+--- !u!114 &114147292212894038
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1820845720836222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c749c202c174cf4c9c1acfc57f4cbb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 5
-  JumpSpeed: 0
+  JumpSpeed: 10
