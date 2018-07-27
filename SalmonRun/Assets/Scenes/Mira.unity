@@ -1099,6 +1099,48 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &516077663
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4190625545479374, guid: 3eb563c097474264caa722a2c8a9108d, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 4.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 4190625545479374, guid: 3eb563c097474264caa722a2c8a9108d, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0.49
+      objectReference: {fileID: 0}
+    - target: {fileID: 4190625545479374, guid: 3eb563c097474264caa722a2c8a9108d, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4190625545479374, guid: 3eb563c097474264caa722a2c8a9108d, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4190625545479374, guid: 3eb563c097474264caa722a2c8a9108d, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4190625545479374, guid: 3eb563c097474264caa722a2c8a9108d, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4190625545479374, guid: 3eb563c097474264caa722a2c8a9108d, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4190625545479374, guid: 3eb563c097474264caa722a2c8a9108d, type: 2}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3eb563c097474264caa722a2c8a9108d, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1 &559328726
 GameObject:
   m_ObjectHideFlags: 0
@@ -1977,7 +2019,7 @@ GameObject:
   - component: {fileID: 1417014806}
   - component: {fileID: 1417014805}
   m_Layer: 0
-  m_Name: Canvas
+  m_Name: HealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
