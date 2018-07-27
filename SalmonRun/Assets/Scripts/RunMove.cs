@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RunMove : MonoBehaviour {
 
+public class RunMove : MonoBehaviour
+{
 
     public float Speed;
     public float JumpSpeed;
@@ -25,5 +26,6 @@ public class RunMove : MonoBehaviour {
             transform.Translate(Vector3.up * JumpSpeed * Time.deltaTime);
         }
     }
-
 }
+
+
