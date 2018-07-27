@@ -25,4 +25,5 @@ public class RunMove : MonoBehaviour {
             transform.Translate(Vector3.up * JumpSpeed * Time.deltaTime);
         }
     }
+
 }

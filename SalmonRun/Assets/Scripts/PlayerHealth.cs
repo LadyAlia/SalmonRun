@@ -11,12 +11,12 @@ public class PlayerHealth : MonoBehaviour {
     void Start() {
 
         curHealth = maxHealth;
-        InvokeRepeating("decreasehealth", 1f, 1f);
+        //InvokeRepeating("decreasehealth", 1f, 1f);
 	}
 
-    void decreasehealth() {
+    void Update() {
 
-        curHealth -= 1f;
+        curHealth = Mathf.Min(curHealth - Time.deltaTime * 2f, maxHealth);
         float calcHealth = curHealth / maxHealth;
         SetHealthBar(calcHealth);
     }
