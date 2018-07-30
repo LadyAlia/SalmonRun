@@ -29,12 +29,14 @@ public class DashSwipe : MonoBehaviour {
     private void SwipeCheck()
     {
         if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
+        {
             startTouchPosition = Input.GetTouch(0).position;
+        }
 
-        if (Input.touchCount > 1 && Input.GetTouch(0).phase == TouchPhase.Ended)
+        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Ended)
         {
             endTouchPosition = Input.GetTouch(0).position;
-            if (endTouchPosition.x > startTouchPosition.x && rb.velocity.x == 0)
+            if (endTouchPosition.x > startTouchPosition.x + 30 && rb.velocity.x == 0)
                 DashForward = true;
         }
     }

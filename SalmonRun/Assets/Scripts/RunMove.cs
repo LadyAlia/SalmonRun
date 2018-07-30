@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class RunMove : MonoBehaviour
 {
-
+    private float TouchStart, JumpTime;
     public float Speed;
     public float JumpSpeed;
     Rigidbody2D PlayerRig;
@@ -14,6 +14,7 @@ public class RunMove : MonoBehaviour
     void Start()
     {
         PlayerRig = GetComponent<Rigidbody2D>();
+        JumpTime = 0.8f;
     }
 
     // Update is called once per frame
@@ -21,10 +22,19 @@ public class RunMove : MonoBehaviour
     {
         transform.Translate(Vector3.right * Speed * Time.deltaTime);
 
-        if (Input.GetKeyDown(KeyCode.J) || Input.touchCount > 0)
+        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
         {
-            transform.Translate(Vector3.up * JumpSpeed * Time.deltaTime);
+            // lähtöaika talteen
+            TouchStart = Time.time;
         }
+
+        if ((Input.GetKeyDown(KeyCode.J) || Input.touchCount > 0) && Input.GetTouch(0).phase == TouchPhase.Ended )
+        {
+            if (Time.time - TouchStart < JumpTime) // jos nykyinen aika - lähtöaika riittävän pieni
+            {
+                transform.Translate(Vector3.up * JumpSpeed * Time.deltaTime);
+            }
+        } 
     }
 }
 
