@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour {
 
@@ -19,6 +20,11 @@ public class PlayerHealth : MonoBehaviour {
         curHealth = Mathf.Min(curHealth - Time.deltaTime * 1f, maxHealth);
         float calcHealth = curHealth / maxHealth;
         SetHealthBar(calcHealth);
+
+        if (curHealth < 0f) {
+            Destroy(gameObject);
+            SceneManager.LoadScene("GameOver");
+        }
     }
 
     public void SetHealthBar(float myHealth) {

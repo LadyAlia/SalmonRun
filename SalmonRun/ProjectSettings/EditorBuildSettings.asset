@@ -14,4 +14,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Mira.unity
     guid: b204a30216346e94db1fd752c356e294
+  - enabled: 1
+    path: Assets/Scenes/GameIsOver.unity
+    guid: c1fc0e636dffab345bc545cf2db44381
+  - enabled: 1
+    path: Assets/Scenes/GameWin.unity
+    guid: ace0c931bda9810499987b2288c94118
+  - enabled: 1
+    path: Assets/Scenes/TheGame.unity
+    guid: dd71ef993ca7f874593c4611d98bf65d
   m_configObjects: {}
