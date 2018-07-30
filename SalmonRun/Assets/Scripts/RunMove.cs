@@ -22,17 +22,18 @@ public class RunMove : MonoBehaviour
     {
         transform.Translate(Vector3.right * Speed * Time.deltaTime);
 
-        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
+        if (Input.GetKeyDown(KeyCode.J) || (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began))
         {
             // lähtöaika talteen
             TouchStart = Time.time;
         }
 
-        if ((Input.GetKeyDown(KeyCode.J) || Input.touchCount > 0) && Input.GetTouch(0).phase == TouchPhase.Ended )
+        if (Input.GetKeyUp(KeyCode.J) || (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Ended))
         {
             if (Time.time - TouchStart < JumpTime) // jos nykyinen aika - lähtöaika riittävän pieni
             {
-                transform.Translate(Vector3.up * JumpSpeed * Time.deltaTime);
+                //transform.Translate(Vector3.up * JumpSpeed * Time.deltaTime);
+                PlayerRig.AddForce(Vector2.up * JumpSpeed);
             }
         } 
     }
