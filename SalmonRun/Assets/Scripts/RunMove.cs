@@ -9,6 +9,7 @@ public class RunMove : MonoBehaviour
     public float Speed;
     public float JumpSpeed;
     Rigidbody2D PlayerRig;
+    public int jumps;
 
     // Use this for initialization
     void Start()
@@ -20,6 +21,8 @@ public class RunMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+
         transform.Translate(Vector3.right * Speed * Time.deltaTime);
 
         if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
@@ -30,12 +33,25 @@ public class RunMove : MonoBehaviour
 
         if ((Input.GetKeyDown(KeyCode.J) || Input.touchCount > 0) && Input.GetTouch(0).phase == TouchPhase.Ended )
         {
-            if (Time.time - TouchStart < JumpTime) // jos nykyinen aika - lähtöaika riittävän pieni
+            if (Time.time - TouchStart < JumpTime && jumps < 2)
             {
                 transform.Translate(Vector3.up * JumpSpeed * Time.deltaTime);
+                jumps++;
+                
             }
+
         } 
+
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Ground")
+        {
+            jumps = 0;
+        }
+    }
+
 }
 
 
