@@ -41,7 +41,7 @@ public class RunMove : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D col) 
     {
 
-        if (col.gameObject.name == "Ground") {
+        if (col.gameObject.tag == "Ground") {
             jumps = 0;
         }
     }
