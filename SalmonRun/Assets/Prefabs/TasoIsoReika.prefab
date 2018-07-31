@@ -21,9 +21,10 @@ GameObject:
   - component: {fileID: 4279029984351132}
   - component: {fileID: 212051028117345962}
   - component: {fileID: 61874674486255088}
+  - component: {fileID: 251805136191031524}
   m_Layer: 0
   m_Name: TasoIsoReika
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35,7 +36,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1309216337167386}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 20.28, y: 0.97, z: 0}
+  m_LocalPosition: {x: 28.75, y: 0.97, z: 0}
   m_LocalScale: {x: 0.6832514, y: 0.7344953, z: 0.6832514}
   m_Children: []
   m_Father: {fileID: 0}
@@ -112,3 +113,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!251 &251805136191031524
+PlatformEffector2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1309216337167386}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 0
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
