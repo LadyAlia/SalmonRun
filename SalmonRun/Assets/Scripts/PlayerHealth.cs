@@ -8,20 +8,30 @@ public class PlayerHealth : MonoBehaviour {
     public float maxHealth = 100f;
     public float curHealth = 0f;
     public GameObject healthBar;
+    public int lives;
 
     void Start() {
-
+        lives = 3;
         curHealth = maxHealth;
         //InvokeRepeating("decreasehealth", 1f, 1f);
 	}
 
     void Update() {
 
-        curHealth = Mathf.Min(curHealth - Time.deltaTime * 2f, maxHealth);
+        curHealth = Mathf.Min(curHealth - Time.deltaTime * 4f, maxHealth);
         float calcHealth = curHealth / maxHealth;
         SetHealthBar(calcHealth);
 
         if (curHealth < 0f) {
+            LoseLife();
+        }
+
+    }
+
+    public void LoseLife() {
+        lives--;
+        curHealth = maxHealth;
+        if (lives < 0) {
             Destroy(gameObject);
             SceneManager.LoadScene("GameIsOver");
         }

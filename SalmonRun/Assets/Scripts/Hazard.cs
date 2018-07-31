@@ -7,8 +7,8 @@ public class Hazard : MonoBehaviour {
 
     private void OnCollisionEnter2D(Collision2D collision) {
         if (collision.gameObject.tag == "Enemy") {
-           Destroy(gameObject);
-           SceneManager.LoadScene("GameIsOver");
+           GetComponent<PlayerHealth>().LoseLife();
+            Destroy(collision.gameObject);
         }
     }
 
