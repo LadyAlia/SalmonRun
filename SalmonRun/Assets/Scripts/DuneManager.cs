@@ -7,13 +7,13 @@ public class DuneManager : MonoBehaviour {
 
     private Transform PlayerTransform;
     private List<GameObject> ActiveDynes;
-    private float SpawnX = 32.0f;
-    private float SafeZone = 10.0f;
+    private float SpawnX = 3.0f;
+    private float SafeZone = 15.0f;
     private float DyneLeng = 10.0f;
-    private int DynesOnScreen = 5;
+    private int DynesOnScreen = 3;
     private int LastPrefabIndex = 0;
 
-    // Use this for initialization
+   
     void Start()
     {
         ActiveDynes = new List<GameObject>();
@@ -28,28 +28,28 @@ public class DuneManager : MonoBehaviour {
 
     // Update is called once per frame
     void Update()
-    {   // Player transform  and Roads Spawn position.
+    {   // Player transform  and Dynes Spawn position.
         if (PlayerTransform.position.x - SafeZone > (SpawnX - DynesOnScreen * DyneLeng))
         {
             SpawnDyne();
-            DeleteRoad();
+            DeleteDyne();
         }
     }
 
-    // Spawning roads.
+    // Spawning Dynes.
     private void SpawnDyne(int PrefabIndex = -1)
     {
         GameObject Dyne;
         Dyne = Instantiate(DynePrefabs[RandomPrefabIndex()]) as GameObject;
         Dyne.transform.SetParent(transform);
-        Dyne.transform.position = Vector3.forward * SpawnX;
+        Dyne.transform.position = Vector3.right * SpawnX;
         SpawnX += DyneLeng;
         ActiveDynes.Add(Dyne);
 
     }
 
-    // Deleting roads.
-    private void DeleteRoad()
+    // Deleting Dynes.
+    private void DeleteDyne()
     {
         Destroy(ActiveDynes[0]);
         ActiveDynes.RemoveAt(0);
