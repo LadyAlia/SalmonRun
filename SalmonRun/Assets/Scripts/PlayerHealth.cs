@@ -23,7 +23,7 @@ public class PlayerHealth : MonoBehaviour {
 
         if (curHealth < 0f) {
             Destroy(gameObject);
-            SceneManager.LoadScene("GameOver");
+            SceneManager.LoadScene("GameIsOver");
         }
     }
 
