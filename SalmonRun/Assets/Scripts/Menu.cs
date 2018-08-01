@@ -35,6 +35,7 @@ public class Menu : MonoBehaviour {
 
     public void ToMenu()
     {
+        SceneManager.LoadScene("MenuScene");
         MenuCanvas.enabled = true;
         CreditsCanvas.enabled = false;
     }
