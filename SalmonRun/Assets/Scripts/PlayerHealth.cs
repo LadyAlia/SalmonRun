@@ -11,10 +11,13 @@ public class PlayerHealth : MonoBehaviour {
     public GameObject healthBar;
     public Text Livetext;
     public int lives;
+    GameObject[] lifeBubbles;
+
 
     void Start() {
         lives = 3;
         curHealth = maxHealth;
+        lifeBubbles = new GameObject[3] { GameObject.FindGameObjectWithTag("Life1"), GameObject.FindGameObjectWithTag("Life2"), GameObject.FindGameObjectWithTag("Life3") };
         //InvokeRepeating("decreasehealth", 1f, 1f);
 	}
 
@@ -31,13 +34,13 @@ public class PlayerHealth : MonoBehaviour {
     }
 
     public void LoseLife() {
-        Livetext.text = "Lives left:" + lives; 
-        //print(Livetext + lives);
         lives--;
         curHealth = maxHealth;
         if (lives < 0) {
             Destroy(gameObject);
             SceneManager.LoadScene("GameIsOver");
+        } else {
+            Destroy(lifeBubbles[lives]);
         }
     }
 
