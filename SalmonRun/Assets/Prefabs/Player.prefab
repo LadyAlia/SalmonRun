@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 114091469752241216}
   - component: {fileID: 95205293534293452}
   - component: {fileID: 114022365879632676}
+  - component: {fileID: 114153649050863352}
   m_Layer: 9
   m_Name: Player
   m_TagString: Player
@@ -58,8 +59,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1820845720836222}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.11, y: -0.78, z: 0}
-  m_LocalScale: {x: 0.077693, y: 0.1816074, z: 0.077693}
+  m_LocalPosition: {x: 1.754, y: 0.106, z: 0}
+  m_LocalScale: {x: 0.006918284, y: 0.016171489, z: 0.006918284}
   m_Children:
   - {fileID: 4798635204954130}
   m_Father: {fileID: 0}
@@ -72,8 +73,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1707086287741732}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.8, y: 13.16, z: 0}
-  m_LocalScale: {x: 7.028561, y: 3.0068707, z: 7.028561}
+  m_LocalPosition: {x: 49.872063, y: -3.8534923, z: 0}
+  m_LocalScale: {x: 39.55964, y: 16.923908, z: 39.55964}
   m_Children: []
   m_Father: {fileID: 4095896471428040}
   m_RootOrder: 0
@@ -152,7 +153,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -2.1, y: 10.7}
+  m_Offset: {x: 15.9, y: -18.8}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -163,7 +164,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 56.5, y: 22.52}
+  m_Size: {x: 329.1, y: 129.97}
   m_EdgeRadius: 0
 --- !u!95 &95205293534293452
 Animator:
@@ -215,6 +216,7 @@ MonoBehaviour:
   maxHealth: 100
   curHealth: 0
   healthBar: {fileID: 0}
+  lives: 0
 --- !u!114 &114091469752241216
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -238,9 +240,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c749c202c174cf4c9c1acfc57f4cbb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 5
-  JumpSpeed: 700
+  Speed: 10
+  JumpSpeed: 500
   jumps: 0
+--- !u!114 &114153649050863352
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1820845720836222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8a128fef521c5942adc3d9a4518a72f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212624529690263690
 SpriteRenderer:
   m_ObjectHideFlags: 1
