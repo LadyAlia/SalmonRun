@@ -6,7 +6,7 @@ public class BubblePopForReal : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D player) {
 
-        player.GetComponent<PlayerHealth>().curHealth += 1;
+        player.GetComponent<PlayerHealth>().curHealth += 2;
         Destroy(gameObject);
     }
 }

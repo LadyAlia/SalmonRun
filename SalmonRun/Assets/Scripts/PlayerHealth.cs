@@ -9,7 +9,6 @@ public class PlayerHealth : MonoBehaviour {
     public float maxHealth = 100f;
     public float curHealth = 0f;
     public GameObject healthBar;
-    public Text Livetext;
     public int lives;
     GameObject[] lifeBubbles;
 
@@ -23,7 +22,7 @@ public class PlayerHealth : MonoBehaviour {
 
     void Update() {
 
-        curHealth = Mathf.Min(curHealth - Time.deltaTime * 4f, maxHealth);
+        curHealth = Mathf.Min(curHealth - Time.deltaTime * 2f, maxHealth);
         float calcHealth = curHealth / maxHealth;
         SetHealthBar(calcHealth);
 
