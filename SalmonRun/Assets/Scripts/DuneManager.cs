@@ -7,10 +7,10 @@ public class DuneManager : MonoBehaviour {
 
     private Transform PlayerTransform;
     private List<GameObject> ActiveDynes;
-    private float SpawnX = 3.0f;
-    private float SafeZone = 15.0f;
-    private float DyneLeng = 10.0f;
-    private int DynesOnScreen = 3;
+    public float SpawnX = 3.0f;
+    public float SafeZone = 15.0f;
+    public float DyneLeng = 10.0f;
+    public int DynesOnScreen = 3;
     private int LastPrefabIndex = 0;
 
    
