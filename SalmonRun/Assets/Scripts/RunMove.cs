@@ -9,12 +9,16 @@ public class RunMove : MonoBehaviour
     public float Speed;
     public float JumpSpeed;
     Rigidbody2D PlayerRig;
-    public int jumps = 0; 
+    public int jumps = 0;
+    private Animator animRun;
+    private Animator animJump;
 
     // Use this for initialization
     void Start()
     {
         PlayerRig = GetComponent<Rigidbody2D>();
+        animRun = GetComponent<Animator>();
+        animJump = GetComponent<Animator>();
         JumpTime = 0.8f;
     }
 
@@ -33,6 +37,8 @@ public class RunMove : MonoBehaviour
                 //transform.Translate(Vector3.up * JumpSpeed * Time.deltaTime);
                 PlayerRig.AddForce(Vector2.up * JumpSpeed);
                 jumps++;
+                animJump.Play("jump");
+                print("hfdh");
             }
         }
     }
@@ -43,6 +49,8 @@ public class RunMove : MonoBehaviour
 
         if (col.gameObject.tag == "Ground") {
             jumps = 0;
+            animRun.Play("Run");
+            print("moi");
         }
     }
         
