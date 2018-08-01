@@ -1347,6 +1347,21 @@ Prefab:
       propertyPath: m_RootOrder
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 114628931747778916, guid: 709498570dc3d824eb9012fd7f7c0bdb,
+        type: 2}
+      propertyPath: SpawnX
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 114628931747778916, guid: 709498570dc3d824eb9012fd7f7c0bdb,
+        type: 2}
+      propertyPath: DyneLeng
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114628931747778916, guid: 709498570dc3d824eb9012fd7f7c0bdb,
+        type: 2}
+      propertyPath: DynesOnScreen
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 709498570dc3d824eb9012fd7f7c0bdb, type: 2}
   m_IsPrefabAsset: 0
