@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour {
 
     public float maxHealth = 100f;
     public float curHealth = 0f;
     public GameObject healthBar;
+    public Text Livetext;
     public int lives;
 
     void Start() {
@@ -29,6 +31,8 @@ public class PlayerHealth : MonoBehaviour {
     }
 
     public void LoseLife() {
+        Livetext.text = "Lives left:" + lives; 
+        //print(Livetext + lives);
         lives--;
         curHealth = maxHealth;
         if (lives < 0) {
