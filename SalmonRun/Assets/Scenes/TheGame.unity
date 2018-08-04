@@ -657,6 +657,11 @@ Prefab:
       propertyPath: m_Color.a
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 61937403295147724, guid: dda3b15d94feb6441881ea9166e0fa83,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dda3b15d94feb6441881ea9166e0fa83, type: 2}
   m_IsPrefabAsset: 0
@@ -1517,10 +1522,10 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 409881628}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5, y: 3.9299998, z: 10}
-  m_LocalScale: {x: 0.15820707, y: 0.15820707, z: 0.15820707}
+  m_LocalPosition: {x: -3.3624165, y: 4.2150536, z: 0}
+  m_LocalScale: {x: 0.10617925, y: 0.17011514, z: 0.15820707}
   m_Children: []
-  m_Father: {fileID: 685629661}
+  m_Father: {fileID: 1504251618}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &409881630
@@ -2856,6 +2861,7 @@ GameObject:
   - component: {fileID: 685629658}
   - component: {fileID: 685629657}
   - component: {fileID: 685629656}
+  - component: {fileID: 685629662}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2971,10 +2977,21 @@ Transform:
   - {fileID: 1004487914}
   - {fileID: 141615732}
   - {fileID: 477604151}
-  - {fileID: 409881629}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &685629662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 685629655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 769ef3bef3356384ba2511bc069d9298, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1074542065}
 --- !u!4 &698517528 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4112456429399884, guid: 71c9019f13162be4aaa918f216be5dbc,
@@ -4379,6 +4396,11 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 71c9019f13162be4aaa918f216be5dbc, type: 2}
   m_IsPrefabAsset: 0
+--- !u!4 &1074542065 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4095896471428040, guid: c191000b91cd3fb41b0a7411db9fe944,
+    type: 2}
+  m_PrefabInternal: {fileID: 733005607}
 --- !u!4 &1081630663 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4056223939208648, guid: 8a1342ca83e70d44daa82bbbfe7879d1,
