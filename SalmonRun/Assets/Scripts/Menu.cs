@@ -7,13 +7,19 @@ using UnityEngine.UI;
 public class Menu : MonoBehaviour {
     public Canvas MenuCanvas;
     public Canvas CreditsCanvas;
+
+    public string bgmAudio;
+    public string stopAudio;
+
   
 
     // Use this for initialization
     void Start ()
     {
+        Fabric.EventManager.Instance.PostEvent(bgmAudio);
         MenuCanvas = GameObject.Find("MenuCanvas").GetComponent<Canvas>();
         CreditsCanvas = GameObject.Find("CreditsCanvas").GetComponent<Canvas>();
+        
 
     }
 
@@ -24,6 +30,8 @@ public class Menu : MonoBehaviour {
 
     public void PlayGame()
     {
+        Fabric.EventManager.Instance.PostEvent(stopAudio);
+
         SceneManager.LoadScene("TheGame");
     }
 
@@ -35,6 +43,7 @@ public class Menu : MonoBehaviour {
 
     public void ToMenu()
     {
+        
         SceneManager.LoadScene("MenuScene");
         MenuCanvas.enabled = true;
         CreditsCanvas.enabled = false;
