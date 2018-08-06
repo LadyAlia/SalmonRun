@@ -8,7 +8,7 @@ public class Hazard : MonoBehaviour {
     private void OnCollisionEnter2D(Collision2D collision) {
         if (collision.gameObject.tag == "Enemy") {
            GetComponent<PlayerHealth>().LoseLife();
-            Destroy(collision.gameObject);
+           Destroy(collision.gameObject);
         }
     }
 

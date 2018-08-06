@@ -23,7 +23,7 @@ public class PlayerHealth : MonoBehaviour {
 
     void Update() {
 
-        curHealth = Mathf.Min(curHealth - Time.deltaTime * 2f, maxHealth);
+        curHealth = Mathf.Min(curHealth - Time.deltaTime * 3f, maxHealth);
         float calcHealth = curHealth / maxHealth;
         SetHealthBar(calcHealth);
 
