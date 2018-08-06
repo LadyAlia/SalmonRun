@@ -10,6 +10,7 @@ public class PlayerHealth : MonoBehaviour {
     public float curHealth = 0f;
     public GameObject healthBar;
     public int lives;
+    public string stopAudio;
     GameObject[] lifeBubbles;
 
 
@@ -38,6 +39,7 @@ public class PlayerHealth : MonoBehaviour {
         if (lives < 0) {
             Destroy(gameObject);
             SceneManager.LoadScene("GameIsOver");
+            Fabric.EventManager.Instance.PostEvent(stopAudio);
         } else {
             Destroy(lifeBubbles[lives]);
         }
